@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Awesome NFT</title>
+
+  <meta property="og:title" content="My Awesome NFT" />
+  <meta property="og:description" content="A unique and special NFT" />
+  <meta property="og:image" content="https://example.com/nft.png" />
+  <meta property="og:url" content="https://example.com/nft-details" />
+  <meta property="eth:nft:name" content="My Awesome NFT" />
+  <meta property="eth:nft:image" content="https://example.com/nft.png" />
+  <meta property="eth:nft:description" content="A unique and special NFT" />
+  <meta property="eth:nft:collection:name" content="Cool Cats Collection" />
+  <meta property="eth:nft:collection:image" content="https://example.com/collection.png" />
+  <meta property="eth:nft:external_link" content="{{external_link}}" />
+  <meta property="eth:nft:contract_address" content="{{contract_address}}" />
+  <meta property="eth:nft:token_id" content="{{token_id}}" />
+<meta property="fc:frame" content="vNext" />
+<meta property="fc:frame:image" content="{{image_url}}" />
+</head>
+<body>
+  <h1>{{name}}</h1>
+  <img src="{{image}}" alt="{{name}}" />
+  <p>{{description}}</p>
+
+  <h2>Attributes</h2>
+  <ul>
+    {{#each attributes}}
+      <li>{{trait_type}}: {{value}}</li>
+      {{- if display_type }}
+        <li>{{trait_type}}:display_type: {{display_type}}</li>
+      {{- endif }}
+    {{/each}}
+  </ul>
+
+  <h2>Creators</h2>
+  <ul>
+    {{#each creators}}
+      <li>{{name}} ({{share}}% share)</li>
+      {{- if payment_address }}
+        <li>Payment Address: {{payment_address}}</li>
+      {{- endif }}
+    {{/each}}
+  </ul>
+
+  </body>
+</html>
